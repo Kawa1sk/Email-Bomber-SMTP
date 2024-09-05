@@ -4,12 +4,10 @@ Public Class Form1
     Private Const WM_NCLBUTTONDOWN As Integer = &HA1
     Private Const HT_CAPTION As Integer = &H2
 
-    ' Önemli: Aşağıdaki satır, user32.dll'deki SendMessage fonksiyonunu dışa aktarır.
     <System.Runtime.InteropServices.DllImport("user32.dll")>
     Private Shared Function SendMessage(ByVal hWnd As IntPtr, ByVal Msg As Integer, ByVal wParam As Integer, ByVal lParam As Integer) As Integer
     End Function
 
-    ' Önemli: Aşağıdaki satır, user32.dll'deki ReleaseCapture fonksiyonunu dışa aktarır.
     <System.Runtime.InteropServices.DllImport("user32.dll")>
     Private Shared Function ReleaseCapture() As Boolean
     End Function
